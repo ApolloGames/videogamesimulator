@@ -1,12 +1,13 @@
 //-- Code Copyright 2019 Dylan Tuten --\\
+window.alert("UPDATE 0.2: Updated graphics, balance fixes.") // UPDATE 0.2
 var Game = {
 	points: 0,
 	level: 0,
 	items: 0,
 	pointsPerClick: 1,
 	levelPerClick: 0.03,
-	pointsPerClickCost: 10,
-	levelPerClickCost: 200,
+	pointsPerClickCost: 8,
+	levelPerClickCost: 150,
 	players: 0,
 	ct: 0,
 	hit: 0

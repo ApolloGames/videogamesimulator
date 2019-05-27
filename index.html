@@ -4,82 +4,46 @@
 		<!-- Code Copyright 2019 Dylan Tuten -->
 		<meta charset="utf-8">
 		<title>Video Game Simulator</title>
-
-		<style type="text/css">
-			body {
-				font-family: : monospace;
-				text-align: center;
-			}
-			h2,p {
-				margin-top: -20px;
-			}
-			h4 {
-				margin-bottom: -3px;
-			}
-
-			.column {
-				float: left;
-				width: 31%;
-				padding: 5px;
-				height: 600px;
-			}
-			.row:after {
-				content: "";
-				display: table;
-				clear: both;
-			}
-
-		</style>
-
-
+		<link href="style.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
-
     	<h3 id="status">Status: You have bought a video game. You have heard it is really fun. To play the game, press the button that says "Play Game". Be careful. It can be addicting!</h3>
-
     	<div class="row">
-
-    	<div class="column" style="background-color:#ccc;">
-    	<h1 id="pointsGained">0 Points</h1>
-    	<h2 id="levelGained">0 Level</h2>
-    	<h2 id="itemsGained">0 Items</h2>
-    	<button onclick="gainPoints();getItems();getLevel()">Play Game</button><br>
-    	</div>
-
-    	<div class="column" style="background-color:#bbb;">
-		<h3>Upgrades:</h3>
-	    <button onclick="buyPointsPerClick()" id="perClickUpgrade">More Points Per Click (Currently Gaining 1 Points Per Click) Cost: 10 Level</button></br>
-	    <button onclick="buyLevelPerClick()" id="LperClickUpgrade">More Level Per Click (Currently Gaining .03 Level Per Click) Cost: 200 Points</button>
-		</div>
-
-		<div class="column" style="background-color:#ccc;">
-    	<h3>Shop:</h3>
-	    <h4>Hire Player</h4>
-	    <span>Need to go to the bathroom, but don't want to miss out on some points?</span></br>
-	    <span>Someone will gain points for you, at the cost of 5,000 items.</span></br>
-	    <span id="playerShop">You own 0 of these.</span></br>
-	    <button onclick="buyPlayer()" >Buy Player</button>
-
-	    <div id="ctSHOW">
-			<h4>Carpal Tunnel</h4>
-		    <span>You can clone yourself and make your clone gain points</span></br>
-		    <span>for you for the small cost of 10,000 items.</span></br>
-		    <span id="ctShop">You own 0 of these.</span></br>
-		    <button onclick="buyCt()" >Buy Carpal Tunnel</button>
-		</div>
-
-		<div id="hitSHOW">
-			<h4>Hitman</h4>
-		    <span>You can hire a hitman in the game to kill characters over and</span></br>
-		    <span>over again and take their items for 10,000 points.</span></br>
-		    <span id="hitShop">You own 0 of these.</span></br>
-		    <button onclick="buyHit()" >Buy Hitman</button>
-		</div>
-		</div>
-		</div>
-
-		<footer><h4>v0.1</h4><br><p>(C)2019 DylanDummy - Hosted by Apollo Games.</p></footer>
-
+	    <div class="box-click">
+	    	<h1 id="pointsGained">0 Points</h1>
+	    	<h2 id="levelGained">0 Level</h2>
+		   	<h2 id="itemsGained">0 Items</h2>
+		   	<input type="image" src="src/click.png" class="bigButton" onclick="gainPoints();getItems();getLevel()"></br>
+	   	</div>
+	    <div class="box-up">
+			<h3>Upgrades:</h3>
+			    <button onclick="buyPointsPerClick()" id="perClickUpgrade">More Points Per Click (Currently Gaining 1 Points Per Click) Cost: 8 Level</button></br>
+			    <button onclick="buyLevelPerClick()" id="LperClickUpgrade">More Level Per Click (Currently Gaining .03 Level Per Click) Cost: 150 Points</button>
+			</div>
+			<div class="box-shop">
+		    	<h3>Shop:</h3>
+			    <h4>Hire Player</h4>
+			    <span>Need to go to the bathroom, but don't want to miss out on some points?</span></br>
+			    <span>Someone will gain points for you, at the cost of 5,000 items.</span></br>
+			    <span id="playerShop">You own 0 of these.</span></br>
+			    <button onclick="buyPlayer()" >Buy Player</button>
+			    <div id="ctSHOW">
+					<h4>Carpal Tunnel</h4>
+				    <span>You can clone yourself and make your clone gain points</span></br>
+				    <span>for you for the small cost of 10,000 items.</span></br>
+				    <span id="ctShop">You own 0 of these.</span></br>
+				    <button onclick="buyCt()" >Buy Carpal Tunnel</button>
+				</div>
+				<div id="hitSHOW">
+					<h4>Hitman</h4>
+				    <span>You can hire a hitman in the game to kill characters over and</span></br>
+				    <span>over again and take their items for 10,000 points.</span></br>
+				    <span id="hitShop">You own 0 of these.</span></br>
+				    <button onclick="buyHit()" >Buy Hitman</button>
+				</div>
+			</div>
+		</div><br>
+		<footer><h4>v0.2</h4><br><p>(C)2019 DylanDummy - Hosted by Apollo Games.</p></footer>
 		<script src="main.js" charset="utf-8" type="text/javascript"></script>
 	</body>
 </html>
